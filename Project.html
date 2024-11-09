@@ -1,0 +1,160 @@
+
+
+<div class="content-row">
+    <div class="left-section">
+        <img src="path-to-your-image.jpg" alt="Brand Image" class="brand-image">
+    </div>
+    <div class="right-section">
+        <form id="booking-form">
+            <label for="destination">Where to:</label>
+            <select id="destination" name="destination">
+                <option value="india">India</option>
+                <option value="france">France</option>
+                <option value="germany">Germany</option>
+                <option value="italy">Italy</option>
+            </select>
+
+            <label for="persons">How Many Persons:</label>
+            <input type="number" id="persons" name="persons" min="1" required>
+
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" name="start-date" required>
+
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" name="end-date" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" minlength="50" maxlength="500" required></textarea>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</div>
+<div class="package-gallery">
+    <div class="package-card">
+        <img src="path-to-image.jpg" alt="Package Image" class="package-image">
+        <h3>Place Name</h3>
+        <p>Attractions description goes here...</p>
+        <p>Price: $XXX</p>
+        <p>Rating: ⭐⭐⭐⭐</p>
+        <button>Book Now</button>
+    </div>
+    <!-- Repeat for 9 packages -->
+</div>
+<div class="services-section">
+    <div class="service-card">
+        <h3>Affordable Hotel</h3>
+        <p>Description of the service.</p>
+    </div>
+    <!-- Repeat for other services -->
+</div>
+<div class="gallery-section">
+    <img src="path-to-image.jpg" alt="Gallery Image" class="gallery-image">
+    <!-- Repeat for other images -->
+</div>
+<div class="about-us-section">
+    <div class="left-section">
+        <img src="path-to-image.jpg" alt="Company Image" class="company-image">
+    </div>
+    <div class="right-section">
+        <h2>About Us</h2>
+        <p>Information about the company...</p>
+    </div>
+</div>
+<footer>
+    <div class="footer-content">
+        <p>BrandName</p>
+        <p>&copy; All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="#"><img src="path-to-icon" alt="Instagram"></a>
+            <a href="#"><img src="path-to-icon" alt="Facebook"></a>
+        </div>
+    </div>
+</footer>
+<!-- Register Modal (using Bootstrap) -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="register-form">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                    
+                    <label for="contact">Contact:</label>
+                    <input type="text" id="contact" name="contact" required>
+                    
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    
+                    <button type="submit">Register</button>
+                </form>
+                <p><a href="login.html">Already have an account? Login here</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('register-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Registration successful!');
+    });
+</script>
+
+
+<script>
+    document.getElementById('booking-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const startDate = new Date(document.getElementById('start-date').value);
+        const endDate = new Date(document.getElementById('end-date').value);
+
+        if (endDate <= startDate) {
+            alert("End date should be greater than start date.");
+            return;
+        }
+
+        alert("Booking successful!");
+    });
+</script>
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+        <p><a href="register.html">Don't have an account? Register here</a></p>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit',[_{{{CITATION{{{_1{](https://github.com/geekyasif/my_web_dev_journey/tree/0b432a392f7d70e5c6eea10fd70dccc2cef2aaf4/project%2Fmini%20project%2Fforum%2Fregister.php)[_{{{CITATION{{{_2{](https://github.com/zadlyka/bita/tree/d7e2f2238ab4ac4a7e8252fcec481d72087c74cb/app%2FViews%2Findex.php)[_{{{CITATION{{{_3{](https://github.com/cairumeng/weibo3/tree/6da687ec11a283433caa3075032fcd87d251b47e/resources%2Fviews%2Fusers%2Fcreate.blade.php)[_{{{CITATION{{{_4{](https://github.com/AdamArthurF/Belajar-PHP/tree/2de7156e21869254f0ed586fa4e42d0f250a0ae4/ProceduralProgramming%2Fphpdasar%2Fhtdocs%2Fpertemuan20%2Fregister.php)[_{{{CITATION{{{_5{](https://github.com/antoHero/vendor-app/tree/53691f02f62d4f97f90fd3f5be8cfce0462d07a5/resources%2Fviews%2Fvendor%2Fmodals%2Fadd_product.blade.php)[_{{{CITATION{{{_6{](https://github.com/mushlih-almubarak/belajar-php-dasar/tree/76688e4511536632f6ae00586b3442984cf1608a/Sistem%20Login%2FRegister.php)[_{{{CITATION{{{_7{](https://github.com/BIDMCDigitalPsychiatry/LAMP-college-study/tree/f7e1cd6c7647608959bb4bf55c5807db565b93cb/main.py)[_{{{CITATION{{{_8{](https://github.com/sahilhadke/Singer-Resturant/tree/b3520f66ca7e176b936e4304d5abd8e8f97d37ed/frontend%2Fsrc%2Fcomponents%2Fregister.js)[_{{{CITATION{{{_9{](https://github.com/khannajai/jamzone/tree/0d9be5396862364fee3a2bca94bfe94f5bfe1502/register.php)[_{{{CITATION{{{_10{](https://github.com/dsh225/introduction-to-front-end-engineering/tree/dfd2ae5d94269e572999377d35f397874e6e7275/docs%2F04.md)[_{{{CITATION{{{_11{](https://github.com/automatejs/automate/tree/6046a62c9768a1fd240ad8c071f201946c93fa15/docs%2Fbinding.md)[_{{{CITATION{{{_12{](https://github.com/wiindha/PraktikumWebD/tree/8e0aa794f31847c2ad46b081a1427cafec12f6fe/Tugas12%2FMasuk.php)[_{{{CITATION{{{_13{](https://github.com/itsjerz/itsjerz/tree/f3a8b1cbef26298b2d7b1b5fcdc7c653ac907c2b/login.php)

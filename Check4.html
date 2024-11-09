@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to BrandName</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .form-control, .btn {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar (from previous implementation) -->
+    <nav class="navbar">
+        <div class="brand">BrandName</div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Book</a>
+            <div class="dropdown">
+                <a href="#">Packages</a>
+                <div class="dropdown-content">
+                    <a href="#">United States</a>
+                    <a href="#">India</a>
+                    <a href="#">France</a>
+                    <a href="#">Germany</a>
+                </div>
+            </div>
+            <a href="#">Services</a>
+            <a href="#">Gallery</a>
+            <a href="#">About</a>
+            <a href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+            <a href="#" data-toggle="modal" data-target="#registerModal">Register</a>
+        </div>
+    </nav>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="register-form">
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" class="form-control" name="fullname" required>
+                        
+                        <label for="contact">Contact:</label>
+                        <input type="text" id="contact" class="form-control" name="contact" required>
+                        
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" class="form-control" name="dob" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" class="form-control" name="email" required>
+                        
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" class="form-control" name="password" required>
+                        
+                        <label for="gender">Gender:</label>
+                        <select id="gender" class="form-control" name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                    <p><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Already have an account? Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="login-form">
+                        <label for="login-email">Email:</label>
+                        <input type="email" id="login-email" class="form-control" name="email" required>
+                        
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" class="form-control" name="password" required>
+                        
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                    <p><a href="#" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">Don't have an account? Register here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Registration successful!');
+        });
+
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Login successful!');
+        });
+    </script>
+</body>
+</html>
